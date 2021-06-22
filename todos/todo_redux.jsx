@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import configureStore from './frontend/store/store';
 
 function Something(){
     return(    
@@ -10,6 +11,7 @@ function Something(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    window.store = configureStore;
     const root = document.getElementById("root");
     ReactDOM.render(<Something />, root);
 })
