@@ -11,7 +11,7 @@ function Something(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    window.store = configureStore;
+    window.store = configureStore();
     const root = document.getElementById("root");
     ReactDOM.render(<Something />, root);
 })
