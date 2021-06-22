@@ -21,7 +21,9 @@ const stepsReducer = (state = initialState, action) => {
   const newState = Object.assign({},state);
   switch (action.type) {
     case RECEIVE_STEPS:
-      newState[action.steps.id] = action.steps;
+        action.steps.forEach(step => {
+            newState[step.id] = step;
+        });
       return newState;
     case RECEIVE_STEP:
         newState[action.step.id] = action.step;
